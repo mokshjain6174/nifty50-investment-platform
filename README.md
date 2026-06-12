@@ -235,9 +235,4 @@ Investment decisions should always involve independent research, risk assessment
 
 ---
 
-## 👨‍💻 Author
 
-**Moksh Jain**
-IIT Roorkee
-
-Machine Learning • Quantitative Finance • Data Analytics
