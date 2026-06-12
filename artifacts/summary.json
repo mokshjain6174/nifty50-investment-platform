@@ -1,0 +1,110 @@
+{
+  "stocks": 49,
+  "rows": 235192,
+  "date_start": "2000-01-03",
+  "date_end": "2021-04-30",
+  "industries": 14,
+  "model_metrics": {
+    "train_rows": 206575,
+    "test_rows": 15237,
+    "mae_21d_return": 0.10177764202701434,
+    "rmse_21d_return": 0.1445112184437444,
+    "r2_21d_return": -0.0029799133050678606,
+    "directional_accuracy_regression": 0.5571962984839536,
+    "directional_accuracy_classifier": 0.5556211852726914,
+    "test_start": "2020-01-01",
+    "test_end": "2021-03-26"
+  },
+  "top_stocks": [
+    {
+      "source_file_symbol": "GRASIM",
+      "company": "Grasim Industries Ltd.",
+      "industry": "CEMENT & CEMENT PRODUCTS",
+      "quality_score": 0.8336734693877551,
+      "forecast_return_21d": 0.04626098672936645,
+      "sharpe": 5.4793312220264125,
+      "volatility": 0.33176879972518375
+    },
+    {
+      "source_file_symbol": "JSWSTEEL",
+      "company": "JSW Steel Ltd.",
+      "industry": "METALS",
+      "quality_score": 0.833673469387755,
+      "forecast_return_21d": 0.0562782941258344,
+      "sharpe": 8.672971381493857,
+      "volatility": 0.4039504208006912
+    },
+    {
+      "source_file_symbol": "VEDL",
+      "company": "Vedanta Ltd.",
+      "industry": "METALS",
+      "quality_score": 0.8051020408163265,
+      "forecast_return_21d": 0.05638462877360207,
+      "sharpe": 4.811589833594247,
+      "volatility": 0.4878699431456126
+    },
+    {
+      "source_file_symbol": "HINDALCO",
+      "company": "Hindalco Industries Ltd.",
+      "industry": "METALS",
+      "quality_score": 0.7877551020408163,
+      "forecast_return_21d": 0.061552338906391266,
+      "sharpe": 5.035377317149938,
+      "volatility": 0.4668576850625605
+    },
+    {
+      "source_file_symbol": "BAJAJ-AUTO",
+      "company": "Bajaj Auto Ltd.",
+      "industry": "AUTOMOBILE",
+      "quality_score": 0.7846938775510204,
+      "forecast_return_21d": 0.022046086047656885,
+      "sharpe": 1.8296684647770307,
+      "volatility": 0.3039318339521992
+    },
+    {
+      "source_file_symbol": "ADANIPORTS",
+      "company": "Adani Ports and Special Economic Zone Ltd.",
+      "industry": "SERVICES",
+      "quality_score": 0.7642857142857142,
+      "forecast_return_21d": 0.024191726696386744,
+      "sharpe": 4.191167942884375,
+      "volatility": 0.3995701705368193
+    },
+    {
+      "source_file_symbol": "BAJFINANCE",
+      "company": "Bajaj Finance Ltd.",
+      "industry": "FINANCIAL SERVICES",
+      "quality_score": 0.7459183673469386,
+      "forecast_return_21d": 0.06413779499202349,
+      "sharpe": 3.058724973196969,
+      "volatility": 0.4730346818227732
+    },
+    {
+      "source_file_symbol": "SBIN",
+      "company": "State Bank of India",
+      "industry": "FINANCIAL SERVICES",
+      "quality_score": 0.673469387755102,
+      "forecast_return_21d": 0.03540755994487864,
+      "sharpe": 2.2170054629193428,
+      "volatility": 0.4141028888509666
+    },
+    {
+      "source_file_symbol": "ULTRACEMCO",
+      "company": "UltraTech Cement Ltd.",
+      "industry": "CEMENT & CEMENT PRODUCTS",
+      "quality_score": 0.6693877551020408,
+      "forecast_return_21d": 0.01399398533857274,
+      "sharpe": 2.7165218681143384,
+      "volatility": 0.31290553625096407
+    },
+    {
+      "source_file_symbol": "TATAMOTORS",
+      "company": "Tata Motors Ltd.",
+      "industry": "AUTOMOBILE",
+      "quality_score": 0.6642857142857143,
+      "forecast_return_21d": 0.06746121751009498,
+      "sharpe": 4.987515928331734,
+      "volatility": 0.565153774102377
+    }
+  ]
+}
