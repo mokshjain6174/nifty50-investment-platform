@@ -1,81 +1,179 @@
-# NIFTY-50 AI Investment Intelligence Platform
+# 📈 Nifty50 Investment Intelligence Platform
 
-A complete, reproducible investment decision-support platform built only from the provided NIFTY-50 stock market datasets in this workspace.
+An end-to-end quantitative investment analysis platform designed to evaluate, rank, and recommend NIFTY-50 stocks using machine learning, portfolio optimization, risk analytics, and explainable AI techniques.
 
-## Deliverables
+The platform transforms historical market data into actionable investment insights by combining predictive modeling, anomaly detection, feature engineering, and portfolio construction within a fully reproducible workflow.
 
-- `app.py`: Streamlit working prototype.
-- `reports/Technical_Report.pdf`: submission-ready technical report.
-- `src/analytics.py`: data loading, feature engineering, modeling, portfolio construction, risk analytics, explainability, and anomaly detection.
-- `scripts/build_artifacts.py`: reproducibly generates model and analytics artifacts.
-- `scripts/generate_report.py`: regenerates the PDF report from local artifacts.
-- `artifacts/`: generated model metrics, scores, portfolio allocations, anomalies, feature importance, and model pickle.
+---
 
-## Dataset Use and Constraints
+## 🚀 Key Features
 
-The solution uses only local files supplied in:
+### Market Intelligence Engine
 
-- `archive/`: NIFTY-50 stock OHLCV files and `stock_metadata.csv`.
-- `archive (2)/Datasets/INDEX/`: NIFTY 50 and INDIA VIX index context.
+* Processes historical OHLCV data for NIFTY-50 constituents.
+* Generates momentum, volatility, liquidity, drawdown, and trend-based indicators.
+* Incorporates benchmark and volatility regime information using NIFTY-50 and INDIA VIX datasets.
 
-No live market data, APIs, news, social media sentiment, proprietary feeds, or external financial datasets are used.
+### Predictive Analytics
 
-## Setup
+* Forecasts future stock performance using machine learning models.
+* Estimates probability of positive returns over a forward investment horizon.
+* Ranks stocks using a composite scoring framework.
+
+### Portfolio Optimization
+
+* Builds investment portfolios for multiple risk profiles:
+
+  * Conservative
+  * Balanced
+  * Aggressive
+* Applies allocation constraints and diversification controls.
+* Computes portfolio-level return and risk statistics.
+
+### Explainable AI
+
+* Provides feature importance analysis.
+* Generates transparent stock recommendations.
+* Highlights key drivers influencing model predictions.
+
+### Risk Monitoring
+
+* Detects abnormal market behavior.
+* Identifies unusual trading volume spikes.
+* Flags volatility shocks and drawdown events.
+* Generates anomaly reports for investment review.
+
+---
+
+## 📂 Project Structure
+
+```text
+.
+├── app.py
+├── archive/
+├── archive (2)/
+├── artifacts/
+├── reports/
+├── scripts/
+├── src/
+└── requirements.txt
+```
+
+### Core Components
+
+| Component                    | Description                                 |
+| ---------------------------- | ------------------------------------------- |
+| `app.py`                     | Streamlit-based interactive dashboard       |
+| `src/analytics.py`           | Core analytics and modeling pipeline        |
+| `scripts/build_artifacts.py` | Generates all analytical outputs            |
+| `scripts/generate_report.py` | Produces technical report                   |
+| `artifacts/`                 | Model outputs and portfolio recommendations |
+| `reports/`                   | Technical documentation                     |
+
+---
+
+## 🛠️ Technology Stack
+
+* Python
+* Pandas
+* NumPy
+* Scikit-Learn
+* Streamlit
+* Matplotlib
+* ReportLab
+
+---
+
+## ⚙️ Installation
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
+git clone <repository-url>
+cd nifty50-investment-platform
+
 pip install -r requirements.txt
 ```
 
-If the required packages are already installed globally, the virtual environment is optional.
+---
 
-## Reproduce Results
+## ▶️ Running the Project
 
-Generate all artifacts:
-
-```bash
-python3 scripts/build_artifacts.py
-```
-
-Generate the technical report:
+### Generate Analytical Artifacts
 
 ```bash
-python3 scripts/generate_report.py
+python scripts/build_artifacts.py
 ```
 
-Run the working prototype:
+### Generate Technical Report
+
+```bash
+python scripts/generate_report.py
+```
+
+### Launch Dashboard
 
 ```bash
 streamlit run app.py
 ```
 
-The app will also generate missing artifacts automatically on first launch.
+---
 
-## Methodology Summary
+## 📊 Generated Outputs
 
-1. Load current NIFTY-50 stock CSV files and metadata from the provided archive.
-2. Add benchmark and volatility-regime context from supplied NIFTY 50 and INDIA VIX index files.
-3. Engineer technical, liquidity, volatility, momentum, drawdown, beta, and VIX features.
-4. Train a 21-trading-day return forecasting model using a strict temporal split.
-5. Train a classifier for probability of positive 21-day return.
-6. Rank stocks using forecast return, up probability, Sharpe ratio, and volatility penalty.
-7. Construct Conservative, Balanced, and Aggressive long-only portfolios with position caps and risk-aversion penalties.
-8. Explain recommendations with feature importance, visible feature values, quantitative rationales, and risk metrics.
-9. Detect unusual volume, volatility spikes, and extreme drawdowns from historical rolling statistics.
+The platform automatically creates:
 
-## Outputs
+* Stock ranking scores
+* Portfolio recommendations
+* Portfolio allocation weights
+* Risk metrics
+* Model evaluation statistics
+* Feature importance analysis
+* Market anomaly reports
 
-Key generated files:
+Important outputs are stored in:
 
-- `artifacts/model_metrics.json`: validation metrics.
-- `artifacts/stock_scores.csv`: latest stock intelligence scores and forecasts.
-- `artifacts/portfolio_profiles.csv`: profile-level portfolio metrics.
-- `artifacts/portfolio_holdings.csv`: recommended allocations.
-- `artifacts/feature_importance.csv`: global explainability.
-- `artifacts/anomalies.csv`: recent anomaly flags.
-- `artifacts/models.pkl`: trained local models.
+```text
+artifacts/
+├── stock_scores.csv
+├── portfolio_holdings.csv
+├── portfolio_profiles.csv
+├── feature_importance.csv
+├── anomalies.csv
+├── model_metrics.json
+└── models.pkl
+```
 
-## Notes
+---
 
-This is an investment intelligence and decision-support system, not financial advice. Historical technical data cannot capture all risks, including earnings surprises, macro shocks, transaction costs, taxes, or changing liquidity.
+## 🔬 Methodology
+
+1. Data ingestion and validation
+2. Feature engineering
+3. Volatility regime analysis
+4. Return forecasting
+5. Classification modeling
+6. Stock scoring and ranking
+7. Portfolio construction
+8. Explainability analysis
+9. Risk and anomaly detection
+
+---
+
+## 📈 Investment Profiles
+
+### Conservative Portfolio
+
+Focuses on stability, lower volatility, and risk-adjusted returns.
+
+### Balanced Portfolio
+
+Balances growth opportunities with controlled risk exposure.
+
+### Aggressive Portfolio
+
+Prioritizes return maximization while accepting higher volatility.
+
+---
+
+## ⚠️ Disclaimer
+
+This project is intended for educational and research purposes only. It does not constitute investment advice, financial recommendations, or portfolio management services. Investment decisions should always involve independent research and professional consultation.
