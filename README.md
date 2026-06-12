@@ -1,26 +1,38 @@
 # 📈 Nifty50 Investment Intelligence Platform
 
+### Machine Learning-Based Stock Analysis, Forecasting & Portfolio Optimization
+
 An end-to-end quantitative investment analysis platform designed to evaluate, rank, and recommend NIFTY-50 stocks using machine learning, portfolio optimization, risk analytics, and explainable AI techniques.
 
 The platform transforms historical market data into actionable investment insights by combining predictive modeling, anomaly detection, feature engineering, and portfolio construction within a fully reproducible workflow.
 
 ---
 
+## 🎯 Overview
+
+The Nifty50 Investment Intelligence Platform is a data-driven decision-support system that analyzes historical stock market data to generate investment insights and portfolio recommendations.
+
+The system leverages machine learning models, technical indicators, risk analytics, and explainability techniques to identify promising investment opportunities while accounting for market volatility and risk.
+
+---
+
 ## 🚀 Key Features
 
-### Market Intelligence Engine
+### 📊 Market Intelligence Engine
 
 * Processes historical OHLCV data for NIFTY-50 constituents.
 * Generates momentum, volatility, liquidity, drawdown, and trend-based indicators.
-* Incorporates benchmark and volatility regime information using NIFTY-50 and INDIA VIX datasets.
+* Incorporates benchmark and volatility-regime information using NIFTY-50 and INDIA VIX datasets.
+* Produces comprehensive stock-level analytics.
 
-### Predictive Analytics
+### 🤖 Predictive Analytics
 
 * Forecasts future stock performance using machine learning models.
 * Estimates probability of positive returns over a forward investment horizon.
-* Ranks stocks using a composite scoring framework.
+* Generates stock ranking scores using multiple performance factors.
+* Evaluates model performance through validation metrics.
 
-### Portfolio Optimization
+### 💼 Portfolio Optimization
 
 * Builds investment portfolios for multiple risk profiles:
 
@@ -29,14 +41,16 @@ The platform transforms historical market data into actionable investment insigh
   * Aggressive
 * Applies allocation constraints and diversification controls.
 * Computes portfolio-level return and risk statistics.
+* Generates optimized stock allocations.
 
-### Explainable AI
+### 🔍 Explainable AI
 
 * Provides feature importance analysis.
 * Generates transparent stock recommendations.
 * Highlights key drivers influencing model predictions.
+* Improves interpretability of investment decisions.
 
-### Risk Monitoring
+### ⚠️ Risk Monitoring
 
 * Detects abnormal market behavior.
 * Identifies unusual trading volume spikes.
@@ -61,14 +75,15 @@ The platform transforms historical market data into actionable investment insigh
 
 ### Core Components
 
-| Component                    | Description                                 |
-| ---------------------------- | ------------------------------------------- |
-| `app.py`                     | Streamlit-based interactive dashboard       |
-| `src/analytics.py`           | Core analytics and modeling pipeline        |
-| `scripts/build_artifacts.py` | Generates all analytical outputs            |
-| `scripts/generate_report.py` | Produces technical report                   |
-| `artifacts/`                 | Model outputs and portfolio recommendations |
-| `reports/`                   | Technical documentation                     |
+| Component                    | Description                                  |
+| ---------------------------- | -------------------------------------------- |
+| `app.py`                     | Streamlit-based interactive dashboard        |
+| `src/analytics.py`           | Core analytics and machine learning pipeline |
+| `scripts/build_artifacts.py` | Generates analytical outputs and models      |
+| `scripts/generate_report.py` | Produces technical report                    |
+| `artifacts/`                 | Model outputs and portfolio recommendations  |
+| `reports/`                   | Technical documentation                      |
+| `archive/`                   | Historical stock market datasets             |
 
 ---
 
@@ -86,10 +101,16 @@ The platform transforms historical market data into actionable investment insigh
 
 ## ⚙️ Installation
 
-```bash
-git clone <repository-url>
-cd nifty50-investment-platform
+### Clone the Repository
 
+```bash
+git clone https://github.com/mokshjain6174/nifty50-investment-platform.git
+cd nifty50-investment-platform
+```
+
+### Install Dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
@@ -115,21 +136,27 @@ python scripts/generate_report.py
 streamlit run app.py
 ```
 
+After launching, open the local URL displayed in the terminal (typically `http://localhost:8501`).
+
 ---
 
-## 📊 Generated Outputs
+## 📊 Results
 
-The platform automatically creates:
+The platform automatically generates:
 
-* Stock ranking scores
-* Portfolio recommendations
-* Portfolio allocation weights
-* Risk metrics
-* Model evaluation statistics
+* Stock ranking and recommendation scores
+* Future return forecasts
+* Probability of positive returns
+* Portfolio allocation recommendations
+* Risk-adjusted portfolio metrics
 * Feature importance analysis
-* Market anomaly reports
+* Market anomaly detection reports
 
-Important outputs are stored in:
+---
+
+## 📁 Generated Outputs
+
+Important outputs are stored in the `artifacts/` directory:
 
 ```text
 artifacts/
@@ -141,6 +168,18 @@ artifacts/
 ├── model_metrics.json
 └── models.pkl
 ```
+
+### Output Descriptions
+
+| File                     | Description                         |
+| ------------------------ | ----------------------------------- |
+| `stock_scores.csv`       | Stock rankings and forecast scores  |
+| `portfolio_holdings.csv` | Recommended stock allocations       |
+| `portfolio_profiles.csv` | Portfolio-level performance metrics |
+| `feature_importance.csv` | Model explainability metrics        |
+| `anomalies.csv`          | Detected market anomalies           |
+| `model_metrics.json`     | Validation and evaluation metrics   |
+| `models.pkl`             | Trained machine learning models     |
 
 ---
 
@@ -174,6 +213,31 @@ Prioritizes return maximization while accepting higher volatility.
 
 ---
 
+## 🔒 Dataset Constraints
+
+This project uses only the datasets provided within the repository and does not rely on:
+
+* Live market feeds
+* External APIs
+* News sentiment data
+* Proprietary financial databases
+* Third-party investment signals
+
+This ensures complete reproducibility of all results.
+
+---
+
 ## ⚠️ Disclaimer
 
-This project is intended for educational and research purposes only. It does not constitute investment advice, financial recommendations, or portfolio management services. Investment decisions should always involve independent research and professional consultation.
+This project is intended for educational and research purposes only. It does not constitute investment advice, financial recommendations, or portfolio management services.
+
+Investment decisions should always involve independent research, risk assessment, and consultation with qualified financial professionals.
+
+---
+
+## 👨‍💻 Author
+
+**Moksh Jain**
+IIT Roorkee
+
+Machine Learning • Quantitative Finance • Data Analytics
